@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "./App.css";
+import NavMenu from "./components/common/NavMenu";
+import "@splidejs/react-splide/css";
+import "@splidejs/react-splide/css/skyblue";
+import "@splidejs/react-splide/css/sea-green";
+import "@splidejs/react-splide/css/core";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Banner from "./components/Home/Banner";
+import Headline from "./components/common/Headline";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavMenu />
+      <Banner />
+      <Headline />
     </div>
   );
 }

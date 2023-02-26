@@ -1,0 +1,124 @@
+.headline {
+    height: 120px;
+    background-image: linear-gradient(-90deg, #e2645e 0, #52739d 100%), linear-gradient(#f8f8f8, #f8f8f8);
+    background-blend-mode: normal, normal;
+    opacity: .96;
+}
+
+.headline_btn {
+    background: red;
+    color: white;
+
+    width: 90px;
+}
+
+.headline_input {
+    width: 420px;
+    border: none;
+    background: white;
+}
+
+label {
+    position: relative;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.headline_btn1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    padding: 10px;
+    background: #DC2E26;
+    width: 120px;
+    border: none;
+    color: white
+}
+
+.headline_btn2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    padding: 10px;
+    background: #12437E;
+    width: 120px;
+    border: none;
+    color: white
+}
+
+
+
+.circle {
+    width: 160px;
+    height: 120px;
+    border-radius: 50%;
+    background: #015D9E;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    background: #000;
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px 3px 0px 0px;
+
+}
+
+.panels {
+    background: #fffffff6;
+    min-height: 200px;
+    width: 100%;
+
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    animation: fadein .8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.panel-title {
+    font-size: 1.5em;
+    font-weight: bold
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked~.panels #one-panel,
+#two:checked~.panels #two-panel,
+#three:checked~.panels #three-panel {
+    display: block
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab,
+#three:checked~.tabs #three-tab {
+    background: #fffffff6;
+    color: #000;
+    border-top: 3px solid #000;
+}
