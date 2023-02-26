@@ -35,18 +35,38 @@ const NavMenu = () => {
   return (
     <>
       <Navbar
-        bg={scrolled ? "dark" : "light"}
-        variant={scrolled ? "dark" : "light"}
+        bg={scrolled ? "light" : "light"}
+        variant={scrolled ? "light" : "light"}
         sticky="top"
         expanded={expanded}
         collapseOnSelect
         expand="lg"
+        className="px-5"
       >
-        <Container>
-          <Navbar.Brand href="#home">Studying in the UK is UKEC</Navbar.Brand>
+        <>
+          {scrolled ? (
+            <Navbar.Brand href="#home">
+              <img
+                src="/assets/Logo/YC.jpg"
+                alt=""
+                className="img-fluid"
+                style={{ width: 320 }}
+              />
+            </Navbar.Brand>
+          ) : (
+            <Navbar.Brand href="#home">
+              <img
+                src="http://www.ycimmigrationus.com/static/upload/image/20220319/1647648548458033.png"
+                alt=""
+                className="img-fluid"
+                style={{ width: 320 }}
+              />
+            </Navbar.Brand>
+          )}
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="mx-auto">
               <Nav.Link href="#features">Features</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <NavDropdown
@@ -94,13 +114,13 @@ const NavMenu = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
+              {/* <Nav.Link href="#deets">More deets</Nav.Link> */}
               <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+                4000654327
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        </>
       </Navbar>
     </>
   );

@@ -1,0 +1,19 @@
+.footer_main {
+    background-color: #F6F6F6;
+    height: 400px;
+}
+
+.footer {
+    margin-top: 80px;
+}
+
+.footer li {
+    list-style-type: none;
+    padding: 0 10px;
+    border-right: 1px solid black;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: black;
+}

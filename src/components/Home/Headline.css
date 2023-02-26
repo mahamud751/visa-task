@@ -111,14 +111,25 @@ input {
 
 #one:checked~.panels #one-panel,
 #two:checked~.panels #two-panel,
-#three:checked~.panels #three-panel {
+#three:checked~.panels #three-panel,
+#four:checked~.panels #four-panel,
+#five:checked~.panels #five-panel {
     display: block
 }
 
 #one:checked~.tabs #one-tab,
 #two:checked~.tabs #two-tab,
-#three:checked~.tabs #three-tab {
+#three:checked~.tabs #three-tab,
+#four:checked~.tabs #four-tab,
+#five:checked~.tabs #five-tab {
     background: #fffffff6;
     color: #000;
     border-top: 3px solid #000;
+}
+
+.headline2 {
+
+    background-image: linear-gradient(-90deg, #e2645e 0, #52739d 100%), linear-gradient(#f8f8f8, #f8f8f8);
+    background-blend-mode: normal, normal;
+    opacity: .96;
 }
