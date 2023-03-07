@@ -133,3 +133,9 @@ input {
     background-blend-mode: normal, normal;
     opacity: .96;
 }
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 100%;
+    }
+}

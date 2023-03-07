@@ -41,7 +41,7 @@ const Footer = () => {
           </Col>
         </Row>
         <hr />
-        <div className="text-center">
+        <div className="fw-semibold text-center mt-5">
           <p>
             Copyright © 2023 www.ukec.com All Rights Reserved
             UKEC英国教育中心.版权所有

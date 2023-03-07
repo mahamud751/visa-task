@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -10,13 +9,24 @@ const NavMenu = () => {
   const [expanded, setExpanded] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown2, setShowDropdown2] = useState(false);
 
+  const handleToggle = () => {
+    setExpanded(true);
+  };
   const handleDropdownEnter = () => {
     setShowDropdown(true);
   };
 
   const handleDropdownLeave = () => {
     setShowDropdown(false);
+  };
+  const handleDropdownEnter2 = () => {
+    setShowDropdown2(true);
+  };
+
+  const handleDropdownLeave2 = () => {
+    setShowDropdown2(false);
   };
 
   useEffect(() => {
@@ -38,10 +48,9 @@ const NavMenu = () => {
         bg={scrolled ? "light" : "light"}
         variant={scrolled ? "light" : "light"}
         sticky="top"
-        expanded={expanded}
         collapseOnSelect
         expand="lg"
-        className="px-5"
+        className="px-5 navbar_main"
       >
         <>
           {scrolled ? (
@@ -64,7 +73,10 @@ const NavMenu = () => {
             </Navbar.Brand>
           )}
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            onclick={handleToggle}
+          />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
               <Nav.Link href="#features">Features</Nav.Link>
@@ -91,21 +103,21 @@ const NavMenu = () => {
               </NavDropdown>
               <NavDropdown
                 title="College Inquiry   "
-                id="basic-nav-dropdown"
-                onMouseEnter={handleDropdownEnter}
-                onMouseLeave={handleDropdownLeave}
-                show={showDropdown}
+                id="basic-nav-dropdowns"
+                onMouseEnter={handleDropdownEnter2}
+                onMouseLeave={handleDropdownLeave2}
+                show={showDropdown2}
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item href="#action/4.1">
                   Primary and secondary school inquiry
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item href="#action/4.2">
                   UK University Search
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item href="#action/4.3">
                   University Major Inquiry
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item href="#action/4.4">
                   Ranking of University Majors
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.5">
@@ -115,7 +127,11 @@ const NavMenu = () => {
             </Nav>
             <Nav>
               {/* <Nav.Link href="#deets">More deets</Nav.Link> */}
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link
+                eventKey={2}
+                href="#memes"
+                className="fw-bold text-bg-dark"
+              >
                 4000654327
               </Nav.Link>
             </Nav>
