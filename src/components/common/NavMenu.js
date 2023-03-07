@@ -56,7 +56,7 @@ const NavMenu = () => {
           {scrolled ? (
             <Navbar.Brand href="#home">
               <img
-                src="assets/Logo/YC.jpg"
+                src="http://www.ycimmigrationus.com/static/upload/image/20220319/1647648548458033.png"
                 alt=""
                 className="img-fluid"
                 style={{ width: 320 }}
