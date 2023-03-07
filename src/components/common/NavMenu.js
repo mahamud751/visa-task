@@ -56,7 +56,7 @@ const NavMenu = () => {
           {scrolled ? (
             <Navbar.Brand href="#home">
               <img
-                src="http://www.ycimmigrationus.com/static/upload/image/20220319/1647648548458033.png"
+                src="assets/Logo/YC.jpg"
                 alt=""
                 className="img-fluid"
                 style={{ width: 320 }}
@@ -65,7 +65,7 @@ const NavMenu = () => {
           ) : (
             <Navbar.Brand href="#home">
               <img
-                src="http://www.ycimmigrationus.com/static/upload/image/20220319/1647648548458033.png"
+                src="assets/Logo/YC.jpg"
                 alt=""
                 className="img-fluid"
                 style={{ width: 320 }}
