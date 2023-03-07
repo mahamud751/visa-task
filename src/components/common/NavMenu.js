@@ -56,7 +56,7 @@ const NavMenu = () => {
           {scrolled ? (
             <Navbar.Brand href="#home">
               <img
-                src="/assets/Logo/YC.jpg"
+                src="assets/Logo/YC.jpg"
                 alt=""
                 className="img-fluid"
                 style={{ width: 320 }}
